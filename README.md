@@ -1,6 +1,6 @@
 # Huffman-Coding
 ## DEVELOPED BY : M.suren.
-## REG NO : 212223230222
+## REG NO : 212223230222.
 ## Aim
 To implement Huffman coding to compress the data using Python.
 
@@ -41,7 +41,13 @@ for char in input_string:
 nodes = [[char, freq] for char, freq in frequency.items()]
 
 
+# Create tree nodes
+
+nodes = [[char, freq] for char, freq in frequency.items()]
+
+
 # Main function to implement huffman coding
+
 
 while len(nodes) > 1:
     # Sort nodes based on frequency
@@ -51,13 +57,12 @@ while len(nodes) > 1:
     left = nodes.pop(0)
     right = nodes.pop(0)
 
-    # Create a new node with combined frequency
-    new_node = [[left, right], left[1] + right[1]]
-    nodes.append(new_node)
+# Create a new node with combined frequency
+new_node = [[left, right], left[1] + right[1]]
+nodes.append(new_node)
 
 # The final node is the Huffman tree
 huffman_tree = nodes[0]
-
 
 # Calculate frequency of occurrence
 
@@ -71,6 +76,13 @@ def generate_codes(tree, code=""):
         generate_codes(tree[0][1], code + "1")
 
 generate_codes(huffman_tree)
+
+
+
+# Print the characters and its huffmancode
+
+
+
 # Print the characters and its huffmancode
 print("Character | Huffman Code")
 print("-------------------------")
@@ -79,12 +91,10 @@ for char, code in huffman_codes.items():
 
 ```
 ## Output:
+<img width="256" height="216" alt="image" src="https://github.com/user-attachments/assets/fad6d400-8505-4ccc-bca1-143535cbea86" />
 
-### Print the characters and its huffmancode
 
-<img width="272" height="211" alt="image" src="https://github.com/user-attachments/assets/3fe0f04d-4cea-4bdb-85a7-afca6a5a1734" />
 
-</br>
 
 
 
